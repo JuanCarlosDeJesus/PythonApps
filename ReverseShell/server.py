@@ -2,7 +2,7 @@ import socket
 import sys
 
 #Create a Socket
-def Create_socket():
+def create_socket():
     try:
         # We will declare global var to be able to access them outside the func
         global host
@@ -16,7 +16,7 @@ def Create_socket():
 
 
 # Bind the socket
-def Bind_socket():
+def bind_socket():
     try:
         global host
         global port
@@ -28,7 +28,7 @@ def Bind_socket():
         s.listen(5)  # allow 5 connections
     except socket.error as msg:
         print("Socket binding error: " + str(msg) + "\n" + "Retrying...")
-        Bind_socket()  # if error, try again
+        bind_socket()  # if error, try again
 
 
 # Establish connection with a client (socket must be listening)
@@ -48,17 +48,16 @@ def send_commands(conn):
             conn.close() # close the connection
             s.close() # close the server socket
             sys.exit() # exit the function
-        if len(cmd) > 0:
-            conn.send(cmd.encode())
-            response = conn.recv(1024).decode()
+        if len(str.encode(cmd)) > 0:
+            conn.send(str.encode(cmd))
+            response = str(conn.recv(1024),"utf-8")
             print(response, end="")
 
 
 # Main function to start the server
 def main():
-    Create_socket()
-    Bind_socket()
-    while True:
-        socket_accept()
+    create_socket()
+    bind_socket()
+    socket_accept()
 
 main()  # call the main function to start the server
