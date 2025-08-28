@@ -1,7 +1,7 @@
 import socket
 import sys
 
-#Create a Socket
+#Create a Socket - s = socket.socket()
 def create_socket():
     try:
         # We will declare global var to be able to access them outside the func
@@ -15,7 +15,8 @@ def create_socket():
         print("Socket creation error: " + str(msg))
 
 
-# Bind the socket
+# .bind() and .listen()
+# .bind() to connect to specific IP the port and .listen() listening for incoming connections
 def bind_socket():
     try:
         global host
@@ -31,7 +32,8 @@ def bind_socket():
         bind_socket()  # if error, try again
 
 
-# Establish connection with a client (socket must be listening)
+# .accept() and .close()
+# .accept() - Establish connection with a client (socket must be listening) and .close() to close the connection
 def socket_accept():
     conn, address = s.accept()
     print("Connection has been established | IP: " + address[0] + " | Port: " + str(address[1]))
