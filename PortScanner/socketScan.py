@@ -11,17 +11,21 @@
 # Always ensure you have permission before performing any port scanning activities.
 
 # Run via command line: python main.py!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+from socket import *
+import time
 
-import nmap
+starttime = time.time()
 
-# port scanning from 75 to 80 on localhost
-begin =  75
-end = 80
-target = '127.0.0.1'
+if __name__ == "__main__":
+    target = input("Enter target IP address: ")
+    t_ip = gethostbyname(target)
+    print(f'Scanning target: {t_ip}')
 
-# port scanning object
-scanner = nmap.PortScanner()
-for i in range(begin, end + 1): # inclusive range of ports
-    res = scanner.scan(target, str(i)) # scan localhost + port i
-    res = res['scan'][target]['tcp'][i]['state'] # get open ports
-    print(f'Port {i} is {res}')
+    for i in range(50, 500):
+        s = socket(AF_INET, SOCK_STREAM) # TCP
+
+        conn = s.connect_ex((t_ip, i)) # returns an error indicator
+        if conn == 0:
+            print(f'Port {i} is open')
+        s.close()
+    print(f'Scanning completed in: {time.time() - starttime} seconds')
