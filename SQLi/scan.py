@@ -49,29 +49,29 @@ def scan_injection_scan(url):
     for form in forms:
         details = form_details(form)
 
-    for i in "\"'":
-        data = {}
-        for input_tag in details["inputs"]:
-            if input_tag["type"] == "hidden" or input_tag["value"]:
-                data[input_tag["name"]] = input_tag["value"] + i
-            elif input_tag["type"] != "submit":
-                data[input_tag["name"]] = f"test{i}"
+        for i in "\"'":
+            data = {}
+            for input_tag in details["inputs"]:
+                if input_tag["type"] == "hidden" or input_tag["value"]:
+                    data[input_tag["name"]] = input_tag["value"] + i
+                elif input_tag["type"] != "submit":
+                    data[input_tag["name"]] = f"test{i}"
 
-        print(url)
-        form_details(form)
+            print(url)
+            form_details(form)
 
-        if details["method"] == "post":
-            res = s.post(url, data=data)
-        elif details["method"] == "get":
-            res = s.get(url, params=data)
-        if vulnerable(res):
-            print(f"[+] SQL Injection vulnerability detected on {url}")
-            print(f"[*] Form details:")
-            print(details)
-        else:
-            print(f"[-] No SQL Injection vulnerability detected on {url}")
-            break
+            if details["method"] == "post":
+                res = s.post(url, data=data)
+            elif details["method"] == "get":
+                res = s.get(url, params=data)
+            if vulnerable(res):
+                print(f"[+] SQL Injection vulnerability detected on {url}")
+                print(f"[*] Form details:")
+                print(details)
+            else:
+                print(f"[-] No SQL Injection vulnerability detected on {url}")
+                break
 
 if __name__ == "__main__":
-    urlToBeChecked = "https://bekbrace.com"
+    urlToBeChecked = input("Enter the URL to be checked: ")
     scan_injection_scan(urlToBeChecked)
