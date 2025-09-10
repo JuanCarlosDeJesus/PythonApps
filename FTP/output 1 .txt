@@ -1,0 +1,1 @@
+b'This is a text file to test.\r\nThis is a second line\r\n'
