@@ -1,4 +1,4 @@
-# UDP Server side
+# UDP Server side - Unlike TCP, UDP is connectionless and does not guarantee delivery
 import socket
 
 # Create a UDP socket using IPv4 (AF_INET) and UDP (SOCK_DGRAM)

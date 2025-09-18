@@ -1,17 +1,19 @@
 # TCP chat connection 
 import socket
-import threading
+import threading  # to handle multiple clients
 
 host = '127.0.0.1'
 port = 59000
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind((host, port)) 
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # TCP connection
+server.bind((host, port))
 server.listen(5)
 
+# Lists for clients and their aliases
 clients = []
 aliases = []
 
+# Function to broadcast messages to all clients
 def broadcast(message):
     for client in clients:
         client.send(message)
