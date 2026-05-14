@@ -163,8 +163,7 @@ cython_debug/
 #.idea/
 
 # VS Code files
-.mp4
-.gif
-.gitignore
-ConvVidtoGif/10SecVid.gif
-ConvVidtoGif/10SecVid.mp4
+*.mp4
+*.gif
+*.png
+
