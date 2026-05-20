@@ -65,7 +65,7 @@ class Client:
         self.input_area.delete('1.0', 'end')
         
     def stop(self):
-        self.rinning = False
+        self.running = False
         self.win.destroy()
         self.sock.close()
         exit(0)
@@ -81,7 +81,7 @@ class Client:
                         self.text_area.config(state='normal')
                         self.text_area.insert('end', message)
                         self.text_area.yview('end')
-                        self.text_area.caonfig(state='disabled')
+                        self.text_area.config(state='disabled')
             except ConnectionAbortedError:
                 break
             except:
