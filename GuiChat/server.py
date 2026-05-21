@@ -23,7 +23,7 @@ def handle(client):
     while True:
         try:
             message = client.recv(1024)
-            print(f"{nicknames[client.index(client)]} says {message}")
+            print(f"{nicknames[clients.index(client)]} says {message}")
             broadcast(message)
         except:
             index = clients.index(client)
