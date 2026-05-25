@@ -12,6 +12,5 @@ dependencies = [
     "pyttsx3",
     "qrcode>=8.2",
     "speechrecognition",
-    "tkinter",
     "vidstream>=0.0.14",
 ]
