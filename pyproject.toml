@@ -9,7 +9,9 @@ dependencies = [
     "opencv-python",
     "pillow>=11.3.0",
     "pyautogui",
+    "pyttsx3",
     "qrcode>=8.2",
+    "speechrecognition",
     "tkinter",
     "vidstream>=0.0.14",
 ]
