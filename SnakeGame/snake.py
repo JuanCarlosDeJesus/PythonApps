@@ -14,7 +14,7 @@ orange = (255,165,0)
 
 width, height = 640,480
 
-game_display = pygame.display.set_mode((widht, height))
+game_display = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Carls Snake Game")
 
 clock = pygame.time.Clock()
@@ -48,7 +48,7 @@ def run_game():
     y_speed = 0
 
     snake_pixels = []
-    snake_lenght = 1
+    snake_length = 1
 
     target_x = round(random.randrange(0, width-snake_size) / 10.0) * 10.0
     target_y = round(random.randrange(0, height-snake_size) / 10.0) * 10.0
@@ -102,22 +102,22 @@ def run_game():
 
         snake_pixels.append([x,y])
 
-        if len(snake_pexels) > snake_length:
+        if len(snake_pixels) > snake_length:
             del snake_pixels[0]
 
         for pixel in snake_pixels[:-1]:
             if pixel == [x,y]:  # snake crashed into itself
                 game_close = True
 
-        draw_snake(sneke_size, snake_pixels)
-        print_score(snake_lenght - 1)
+        draw_snake(snake_size, snake_pixels)
+        print_score(snake_length - 1)
 
         pygame.display.update()
 
         if x == target_x and y == target_y:
             target_x = round(random.randrange(0, width-snake_size) / 10.0) * 10.0
             target_y = round(random.randrange(0, height-snake_size) / 10.0) * 10.0
-            snake_lenght += 1
+            snake_length += 1
 
         clock.tick(snake_speed)
 
