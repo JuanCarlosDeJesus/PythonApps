@@ -10,6 +10,7 @@ dependencies = [
     "pillow>=11.3.0",
     "pyautogui",
     "pygame>=2.6.1",
+    "pypdf2>=3.0.1",
     "pyttsx3",
     "qrcode>=8.2",
     "speechrecognition",
