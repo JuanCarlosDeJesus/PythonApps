@@ -13,6 +13,7 @@ dependencies = [
     "pypdf2>=3.0.1",
     "pypokedex>=1.6.0",
     "pyttsx3",
+    "pytubefix>=10.7.3",
     "qrcode>=8.2",
     "speechrecognition",
     "urllib3>=2.6.3",
