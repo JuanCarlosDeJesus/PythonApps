@@ -11,8 +11,10 @@ dependencies = [
     "pyautogui",
     "pygame>=2.6.1",
     "pypdf2>=3.0.1",
+    "pypokedex>=1.6.0",
     "pyttsx3",
     "qrcode>=8.2",
     "speechrecognition",
+    "urllib3>=2.6.3",
     "vidstream>=0.0.14",
 ]
