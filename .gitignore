@@ -170,3 +170,4 @@ cython_debug/
 *.pdf
 *.mp3
 *.m4a
+*.txt
