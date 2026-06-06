@@ -419,6 +419,24 @@ wheels = [
 ]
 
 [[package]]
+name = "docutils"
+version = "0.23"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/39/a4/5180d9afc57e8fca05601dd652bdff19604c218814037fe90ffc7625a50a/docutils-0.23.tar.gz", hash = "sha256:746f5060322511280a1e50eb76846ed6bf2342984b2ac04dc42caa1a8d78799e", size = 2303823, upload-time = "2026-05-27T17:41:06.934Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/32/91/30151a39f7570f448ed84529390628a651d7f27c87d73c9b887f8189695e/docutils-0.23-py3-none-any.whl", hash = "sha256:25d013af9bf23bc1c7b2b093dff4208166c53a94786c9e447808335ef1185fea", size = 634701, upload-time = "2026-05-27T17:40:58.442Z" },
+]
+
+[[package]]
+name = "filetype"
+version = "1.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bb/29/745f7d30d47fe0f251d3ad3dc2978a23141917661998763bebb6da007eb1/filetype-1.2.0.tar.gz", hash = "sha256:66b56cd6474bf41d8c54660347d37afcc3f7d1970648de365c102ef77548aadb", size = 998020, upload-time = "2022-11-02T17:34:04.141Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/18/79/1b8fa1bb3568781e84c9200f951c735f3f157429f44be0495da55894d620/filetype-1.2.0-py2.py3-none-any.whl", hash = "sha256:7ce71b6880181241cf7ac8697a2f1eb6a8bd9b429f7ad6d27b8db9ba5f1c2d25", size = 19970, upload-time = "2022-11-02T17:34:01.425Z" },
+]
+
+[[package]]
 name = "frozenlist"
 version = "1.8.0"
 source = { registry = "https://pypi.org/simple" }
@@ -562,6 +580,103 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/b9/28/99c51f664567218d824af024c0251650fb27e4ca066df188dab0769c5b91/idna-3.17.tar.gz", hash = "sha256:5eb0cb53bc467c12eadcf6de83163ad8527cec9416f44b9b61b19caedad2b87f", size = 196048, upload-time = "2026-05-28T14:32:38.55Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/de/a7/f76514cc40ad6234098ecdebda08732d75964776c51a42845b7da10649e2/idna-3.17-py3-none-any.whl", hash = "sha256:466e48829084efe2548012b855df21540b96f2e20e51bd124c851536556a592c", size = 65316, upload-time = "2026-05-28T14:32:37.035Z" },
+]
+
+[[package]]
+name = "kivy"
+version = "2.3.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "docutils" },
+    { name = "filetype" },
+    { name = "kivy-deps-angle", marker = "sys_platform == 'win32'" },
+    { name = "kivy-deps-glew", marker = "sys_platform == 'win32'" },
+    { name = "kivy-deps-sdl2", marker = "sys_platform == 'win32'" },
+    { name = "kivy-garden" },
+    { name = "pygments" },
+    { name = "pypiwin32", marker = "sys_platform == 'win32'" },
+    { name = "requests", version = "2.32.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "requests", version = "2.34.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/de/48/c40f023dc103bdbd56db11facbb2d0ecbf4b019f7392875ee2a8227cb51e/Kivy-2.3.1.tar.gz", hash = "sha256:0833949e3502cdb4abcf9c1da4384674045ad7d85644313aa1ee7573f3b4f9d9", size = 23967306, upload-time = "2024-12-26T16:13:49.299Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e0/94/6a593322af5246915701112246d80930aee27b60ee855b24011612a56dff/Kivy-2.3.1-cp310-cp310-macosx_10_15_universal2.whl", hash = "sha256:ace93c166c9400f9435cfd3bd179b5ef9fdd40d69ee8171a6b8beba08c402d09", size = 11086300, upload-time = "2024-12-26T16:22:35.007Z" },
+    { url = "https://files.pythonhosted.org/packages/47/ba/c8e5468e9884ed974fa3da82ddefa934b46741fa469788309670b7a01eea/Kivy-2.3.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:3d6215762510b463b0461d173f8a0b22e449beb12ba79cf151e18aa1d3d12a40", size = 21342487, upload-time = "2024-12-26T18:27:34.046Z" },
+    { url = "https://files.pythonhosted.org/packages/5f/a5/880e85aac2724ed60ecf109ad3c983c9cc90df912d82f02b8c734bdbfa4d/Kivy-2.3.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ba83dd8266fc2b1247de18c5e8114fa47ea20eb33eb7c3a9e2eb6202b9778088", size = 21601873, upload-time = "2024-12-26T18:27:39.386Z" },
+    { url = "https://files.pythonhosted.org/packages/10/06/9d6ac7b94379308db3773923aa37b828e8d51fc19283d494820649ee385e/Kivy-2.3.1-cp310-cp310-win_amd64.whl", hash = "sha256:d28ad14162554abd0324ae8f66ce2f374c05456d2656d60cfa80814f715d62c0", size = 4581929, upload-time = "2024-12-26T16:13:26.27Z" },
+    { url = "https://files.pythonhosted.org/packages/f7/02/c76a94480adcb93e4da1b393a8eb392914b5812a5a5aa5bdb401c03571c7/Kivy-2.3.1-cp311-cp311-macosx_10_15_universal2.whl", hash = "sha256:acb58843763075818de919989a73657307f4d833a7cc5547c1b16c226e260e5d", size = 11102692, upload-time = "2024-12-26T16:22:39.038Z" },
+    { url = "https://files.pythonhosted.org/packages/03/ac/f5021a35b61f36910a2f38741f28a3e2384c7865c5bf7948cc82371dfe74/Kivy-2.3.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b7a1799b19f6ab3bcfcef1e729a0229cee646167a1633e067c2add6978f928bb", size = 22792626, upload-time = "2024-12-26T18:27:43.173Z" },
+    { url = "https://files.pythonhosted.org/packages/8c/a1/f0fbcbabf8e285967bbd373275b9bd8e170e79b660a83886f998bdaa5b89/Kivy-2.3.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f180280df46a8c2f9988159938aa1a3e5a0094060d9586ea79df4b4ead9cad98", size = 22978300, upload-time = "2024-12-26T18:27:48.149Z" },
+    { url = "https://files.pythonhosted.org/packages/62/52/a95bb60501aacf2ff8477f8c2e6b90324c1d48a917bd822d3cccb664cdad/Kivy-2.3.1-cp311-cp311-win_amd64.whl", hash = "sha256:002de19fef53955c48108758beea3092cf281326642d2e71eca1c443f4227cce", size = 4596321, upload-time = "2024-12-26T16:13:28.331Z" },
+    { url = "https://files.pythonhosted.org/packages/de/57/ae1c82d8e017776934659a8cbba19f9b2e870146ad61d825b9061dd94e40/Kivy-2.3.1-cp312-cp312-macosx_10_15_universal2.whl", hash = "sha256:3f74679ef305f0ed0d8bb3599a2dddc80ffc81157bdc07947498dd689fc9a5d9", size = 11122180, upload-time = "2024-12-26T16:22:43.165Z" },
+    { url = "https://files.pythonhosted.org/packages/c1/6b/227e059c9c124632ca3dbbcb24301ec06aedf80f6708cf15588bb3f0a708/Kivy-2.3.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:663e9b2fe5002f53371b3ad3712dccdaaa96905bbeaa83d7c7e64f3c44fec94e", size = 22740609, upload-time = "2024-12-26T18:27:51.985Z" },
+    { url = "https://files.pythonhosted.org/packages/5b/17/e11a5b5778869ea4ec013d29c2fb50829226d6da2cc4d8ce91f27bf0a773/Kivy-2.3.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2be79fe1494b6e60cb5aa5f124c37961530417cf27a53171b5a72c9e4c7d41cf", size = 23114729, upload-time = "2024-12-26T18:27:57.197Z" },
+    { url = "https://files.pythonhosted.org/packages/25/f2/5dd333fc5917030bdc3daa321eb9c465886618f76b41f9dad92dd2f25928/Kivy-2.3.1-cp312-cp312-win_amd64.whl", hash = "sha256:2046f6608d17b6c1a0530ac9aa127307fa25f6f75764f1d60428a1c0f6c0af88", size = 4562687, upload-time = "2024-12-26T16:13:31.375Z" },
+    { url = "https://files.pythonhosted.org/packages/c9/6c/2c7d7e9a1fe593de7e14cdd3eed8a17c22c62078ac41cfcde2e5f8af5f9c/Kivy-2.3.1-cp313-cp313-macosx_10_15_universal2.whl", hash = "sha256:d8d9e57501961c5d45e5a2c5af0caef24e48f43a0cd88f607eb3b517198cfec4", size = 11033253, upload-time = "2024-12-26T16:22:47.541Z" },
+    { url = "https://files.pythonhosted.org/packages/df/62/12342de62d510bcc1a1e58d071c4830adf13b0787b2314b23c70add0e7ff/Kivy-2.3.1-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bfe25296e9612cbfa2b68cfb0ccd3c80db1441c11261a9e131d5f8fed7618c2c", size = 22514825, upload-time = "2024-12-26T18:28:01.921Z" },
+    { url = "https://files.pythonhosted.org/packages/78/04/b00303f94bd6bc1a2cff274110ea843f9976c9b4f7b2eb7af87ddf49481e/Kivy-2.3.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:950d17e275f817ca34cc7c9d55f9d229067e2f7fbd0fad985a74c94893f7e739", size = 22915702, upload-time = "2024-12-26T18:28:07.482Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/c3/76e559df7250c3e06abf682f6f9d0856299f21629d50c441006b3413a7d0/Kivy-2.3.1-cp313-cp313-win_amd64.whl", hash = "sha256:b5127af11c2fc1299f2331402fe4f6edb0985711c2841fbfdf509830c058c78e", size = 4540500, upload-time = "2024-12-26T16:13:34.158Z" },
+    { url = "https://files.pythonhosted.org/packages/64/aa/e865e7b2158a39b87723f3b0fa55624e5911a7438f24c40e0fe3ff1c04a9/Kivy-2.3.1-cp39-cp39-macosx_10_15_universal2.whl", hash = "sha256:38a265ff95120694ab7dfc29ed2ccdec40a8a47344387b886f498449b0c3c66c", size = 11115743, upload-time = "2024-12-26T16:22:55.665Z" },
+    { url = "https://files.pythonhosted.org/packages/82/35/93ee7e4c87aa4898298c4ef18e80a8df381ab85ea9a6969009a8b7a7ba76/Kivy-2.3.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:ae8168549c822a7122044965715d9f953a1862fdef132ea7725df8c1d2f19e5c", size = 21398755, upload-time = "2024-12-26T18:28:19.786Z" },
+    { url = "https://files.pythonhosted.org/packages/50/a9/9acd8f4542e68f03aa87d3a7fdf917cf00dd5904301406c8078d19730bbf/Kivy-2.3.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:748163206ce95aab5aaad1ada772a79e422a80b6308623510e74a1b7baf80f0a", size = 21656952, upload-time = "2024-12-26T18:28:23.433Z" },
+    { url = "https://files.pythonhosted.org/packages/10/af/eb2124df73fcb3fcbdf2b138f9b93008464fbed9deea07a8fa446a6ec5f8/Kivy-2.3.1-cp39-cp39-win_amd64.whl", hash = "sha256:91c836b7c2b4958fb4b3839f63b1724435bd617548baace0602c122d39756746", size = 4595649, upload-time = "2024-12-26T16:13:42.218Z" },
+]
+
+[[package]]
+name = "kivy-deps-angle"
+version = "0.4.0"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f5/09/63c7f5e813dfa3b9b435d4a81a5837de943f3175402cd42df2aa334fb55e/kivy_deps.angle-0.4.0-cp310-cp310-win32.whl", hash = "sha256:7873a551e488afa5044c4949a4aa42c4a4c4290469f0a6dd861e6b95283c9638", size = 4588970, upload-time = "2023-12-08T09:45:48.392Z" },
+    { url = "https://files.pythonhosted.org/packages/e2/4a/5a0d2970dc2ab3ec9538e24b9d41077c05fa2de6cacf82d1e65ed5105ca9/kivy_deps.angle-0.4.0-cp310-cp310-win_amd64.whl", hash = "sha256:71f2f01a3a7bbe1d4790e2a64e64a0ea8ae154418462ea407799ed66898b2c1f", size = 5130936, upload-time = "2023-12-08T09:46:16.138Z" },
+    { url = "https://files.pythonhosted.org/packages/e8/1a/038c0844aa46fc49dcf8a657e890729f8960bfcac72e9c09c10cc18b32f2/kivy_deps.angle-0.4.0-cp311-cp311-win32.whl", hash = "sha256:c3899ff1f3886b80b155955bad07bfa33bbebd97718cdf46dfd788dc467124bc", size = 4588968, upload-time = "2023-12-08T09:46:35.181Z" },
+    { url = "https://files.pythonhosted.org/packages/c3/b1/d1ca22a7b18e7b2b90152a78a0c2d09a96fdb924f87be1914d70d9bee543/kivy_deps.angle-0.4.0-cp311-cp311-win_amd64.whl", hash = "sha256:574381d4e66f3198bc48aa10f238e7a3816ad56b80ec939f5d56fb33a378d0b1", size = 5130936, upload-time = "2023-12-08T09:46:19.348Z" },
+    { url = "https://files.pythonhosted.org/packages/c1/89/bb8b9a0fee422972fcf38a406ee9d0b1636968d7d2b5e97aafea8fdec251/kivy_deps.angle-0.4.0-cp312-cp312-win32.whl", hash = "sha256:4fa7a6366899fba13f7624baf4645787165f45731db08d14557da29c12ee48f0", size = 4588969, upload-time = "2023-12-08T09:45:36.62Z" },
+    { url = "https://files.pythonhosted.org/packages/c7/f2/d1500b880d3079454af0f935408ddd37cfce4fd11f53d0917e169d478869/kivy_deps.angle-0.4.0-cp312-cp312-win_amd64.whl", hash = "sha256:668e670d4afd2551af0af2c627ceb0feac884bd799fb6a3dff78fdbfa2ea0451", size = 5130935, upload-time = "2023-12-08T09:46:38.767Z" },
+    { url = "https://files.pythonhosted.org/packages/47/7e/ad805773fb76f07cb1bdf5147e66ba264a94f5ac54553cd9dee809a161bb/kivy_deps.angle-0.4.0-cp313-cp313-win_amd64.whl", hash = "sha256:9afbf702f8bb9a993c48f39c018ca3b4d2ec381a5d3f82fe65bdaa6af0bba29b", size = 5133260, upload-time = "2024-10-07T19:14:24.171Z" },
+    { url = "https://files.pythonhosted.org/packages/3a/0c/430e68efbe76eb6f942314ec46b9cb5630037a218dd5c04ff3568b7d1787/kivy_deps.angle-0.4.0-cp39-cp39-win32.whl", hash = "sha256:6546a62aba2b7e18a800b3df79daa757af3a980c297646c986896522395794e2", size = 4588965, upload-time = "2023-12-08T09:47:59.873Z" },
+    { url = "https://files.pythonhosted.org/packages/54/bf/283f2f77e0ffd94c425e87069b9dc83780eab10fa76d2751c2938352f202/kivy_deps.angle-0.4.0-cp39-cp39-win_amd64.whl", hash = "sha256:bfaf9b37f2ecc3e4e7736657eed507716477af35cdd3118903e999d9d567ae8c", size = 5130932, upload-time = "2023-12-08T09:47:05.386Z" },
+]
+
+[[package]]
+name = "kivy-deps-glew"
+version = "0.3.1"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b2/40/7f38e53f5bdcc422970efec1ed6c84d9372889ec6b30d882052e9abf25f9/kivy_deps.glew-0.3.1-cp310-cp310-win32.whl", hash = "sha256:8f4b3ed15acb62474909b6d41661ffb4da9eb502bb5684301fb2da668f288a58", size = 126473, upload-time = "2022-02-15T20:12:01.995Z" },
+    { url = "https://files.pythonhosted.org/packages/b3/ff/6b140594883342d9ef1576dae27fa1b086d494f50f33c105f740df8c8005/kivy_deps.glew-0.3.1-cp310-cp310-win_amd64.whl", hash = "sha256:aef2d2a93f129d8425c75234e7f6cc0a34b59a4aee67f6d2cd7a5fdfa9915b53", size = 123587, upload-time = "2022-02-15T20:11:46.421Z" },
+    { url = "https://files.pythonhosted.org/packages/5d/4e/4300963410a49c4ab6eaadefce3e09c5e17421bc042b072862a27413b08c/kivy_deps.glew-0.3.1-cp311-cp311-win32.whl", hash = "sha256:ee2f80ef7ac70f4b61c50da8101b024308a8c59a57f7f25a6e09762b6c48f942", size = 126457, upload-time = "2022-10-27T18:37:21.83Z" },
+    { url = "https://files.pythonhosted.org/packages/d6/37/884034260818569547347cc2ba89780ff3f83a9ce6b9a894360c1d86e82c/kivy_deps.glew-0.3.1-cp311-cp311-win_amd64.whl", hash = "sha256:22e155ec59ce717387f5d8804811206d200a023ba3d0bc9bbf1393ee28d0053e", size = 123574, upload-time = "2022-10-27T18:36:49.17Z" },
+    { url = "https://files.pythonhosted.org/packages/2b/3b/a960053dccd627e4483db4765fa84318a831cbf3af648aee20297ae56815/kivy_deps.glew-0.3.1-cp312-cp312-win32.whl", hash = "sha256:b64ee4e445a04bc7c848c0261a6045fc2f0944cc05d7f953e3860b49f2703424", size = 126458, upload-time = "2023-12-06T21:24:08.893Z" },
+    { url = "https://files.pythonhosted.org/packages/ad/3a/37a0a051dd3c7298d9e149a489457a6196665444c1a1473ad4fa617e05af/kivy_deps.glew-0.3.1-cp312-cp312-win_amd64.whl", hash = "sha256:3acbbd30da05fc10c185b5d4bb75fbbc882a6ef2192963050c1c94d60a6e795a", size = 123573, upload-time = "2023-12-06T21:25:58.922Z" },
+    { url = "https://files.pythonhosted.org/packages/21/99/e3478c34afed7a820b3348ce7fefc53f2034fa340348dca57162695e69d9/kivy_deps.glew-0.3.1-cp313-cp313-win_amd64.whl", hash = "sha256:f4aa8322078359862ccd9e16e5cea61976d75fb43125d87922e20c916fa31a11", size = 123595, upload-time = "2024-10-07T18:46:16.273Z" },
+    { url = "https://files.pythonhosted.org/packages/85/8c/7ee60cee4a635f4e953fc96c92f50ca133f8a8cf37a419d2e8733ea83893/kivy_deps.glew-0.3.1-cp39-cp39-win32.whl", hash = "sha256:4e377ed97670dfda619a1b63a82345a8589be90e7c616a458fba2810708810b1", size = 126471, upload-time = "2022-02-15T20:22:58.535Z" },
+    { url = "https://files.pythonhosted.org/packages/8c/64/7fb0092751f33b370ca3b6249f96f0a9384a3e7de08ce03f392ddd19a179/kivy_deps.glew-0.3.1-cp39-cp39-win_amd64.whl", hash = "sha256:081a09b92f7e7817f489f8b6b31c9c9623661378de1dce1d6b097af5e7d42b45", size = 123587, upload-time = "2022-02-15T20:23:58.375Z" },
+    { url = "https://files.pythonhosted.org/packages/6a/dc/dcb7716e511f49ab0c3b1f747a5fae2b67895359ea87994867b8ab41fe4c/kivy_deps_glew-0.3.1-cp314-cp314-win_amd64.whl", hash = "sha256:f12bd302dc65ed683bdc03cbbb301f23c2220d8837bca444529858a8b1767acc", size = 132402, upload-time = "2025-10-09T19:36:47.871Z" },
+]
+
+[[package]]
+name = "kivy-deps-sdl2"
+version = "0.8.0"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/f0/aacffedca14a6fdb258da7062ba36635faaa1ae084c6b7fb5e9042a441b4/kivy_deps.sdl2-0.8.0-cp310-cp310-win_amd64.whl", hash = "sha256:5af0a3b318a6ec9e0f0c1d476a4af4b2d0cbcce4dbfd89bc4681c33bcd6b3bcd", size = 4182250, upload-time = "2024-10-05T09:06:12.754Z" },
+    { url = "https://files.pythonhosted.org/packages/4d/a5/d0605aea79495cc430807fb33f0615fe0a9cadb05da45fc6faa6f126a9fd/kivy_deps.sdl2-0.8.0-cp311-cp311-win_amd64.whl", hash = "sha256:ae3735480841ec9a57c0fb26e8647adee474a3d746147e3d75a1fc177c0fbc01", size = 4182250, upload-time = "2024-10-05T09:06:27.444Z" },
+    { url = "https://files.pythonhosted.org/packages/6e/0a/f34b1593977443e02e83343afb80d4a7d06fac394c1c60ac8590ed0e27c5/kivy_deps.sdl2-0.8.0-cp312-cp312-win_amd64.whl", hash = "sha256:bfe0cfca77883dde7e297b3b6039fa9cd7ee8df6b0d12516b38addb0551a574c", size = 4182249, upload-time = "2024-10-05T09:07:11.952Z" },
+    { url = "https://files.pythonhosted.org/packages/9f/94/ef03ca62e042cd8e6a1455279622648c22cd891577b4ad980e1322dcb4ee/kivy_deps.sdl2-0.8.0-cp313-cp313-win_amd64.whl", hash = "sha256:56b1c44565b5e8cfc510585db13396edfc605965254f49ed8931189c546d481f", size = 4182250, upload-time = "2024-10-05T09:07:33.029Z" },
+    { url = "https://files.pythonhosted.org/packages/4e/22/3ece654ede080ae87fd7f99057012f30a8e679714f9c5ed2956836d8a9b2/kivy_deps.sdl2-0.8.0-cp39-cp39-win_amd64.whl", hash = "sha256:dbaa6718e66e8cd4967c2d4021e05114c558342e2468a86c0bce917bea10003f", size = 4182252, upload-time = "2024-10-05T09:06:45.728Z" },
+]
+
+[[package]]
+name = "kivy-garden"
+version = "0.1.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests", version = "2.32.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "requests", version = "2.34.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6a/55/cd1555bde62f809219cbc5d8a0836b0293399da2f4ba4e8ee84b6a7cc393/Kivy_Garden-0.1.5-py3-none-any.whl", hash = "sha256:ef50f44b96358cf10ac5665f27a4751bb34ef54051c54b93af891f80afe42929", size = 4623, upload-time = "2022-03-23T23:25:33.752Z" },
 ]
 
 [[package]]
@@ -1545,6 +1660,15 @@ dependencies = [
     { name = "pyrect" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/e1/70/c7a4f46dbf06048c6d57d9489b8e0f9c4c3d36b7479f03c5ca97eaa2541d/PyGetWindow-0.0.9.tar.gz", hash = "sha256:17894355e7d2b305cd832d717708384017c1698a90ce24f6f7fbf0242dd0a688", size = 9699, upload-time = "2020-10-04T02:12:50.806Z" }
+
+[[package]]
+name = "pygments"
+version = "2.20.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/c3/b2/bc9c9196916376152d655522fdcebac55e66de6603a76a02bca1b6414f6c/pygments-2.20.0.tar.gz", hash = "sha256:6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f", size = 4955991, upload-time = "2026-03-29T13:29:33.898Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f4/7e/a72dd26f3b0f4f2bf1dd8923c85f7ceb43172af56d63c7383eb62b332364/pygments-2.20.0-py3-none-any.whl", hash = "sha256:81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176", size = 1231151, upload-time = "2026-03-29T13:29:30.038Z" },
+]
 
 [[package]]
 name = "pymsgbox"
@@ -8717,6 +8841,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "asyncio" },
+    { name = "kivy" },
     { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
     { name = "numpy", version = "2.4.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
@@ -8739,6 +8864,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "asyncio", specifier = ">=4.0.0" },
+    { name = "kivy", specifier = ">=2.3.1" },
     { name = "numpy" },
     { name = "opencv-python" },
     { name = "pillow", specifier = ">=11.3.0" },
