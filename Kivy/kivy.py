@@ -1,2 +1,0 @@
-# Kivy
-import kivy
