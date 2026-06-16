@@ -15,9 +15,17 @@ class MyGUI(QMainWindow):
         self.action18pt.triggered.connect(lambda: self.change_size(18))
         self.action24pt.triggered.connect(lambda: self.change_size(24))
 
+        self.actionOpen.triggered.connect(self.open_file)
+
     def change_size(self, size):
         self.textEdit.setFont(QFont("Arial", size))
 
+    def open_file(self):
+        # options = QFileDialog.Option()
+        filename, _ = QFileDialog.getOpenFileName(self, "Open File", "", "Text Files (*.txt);;Python Files (*.py)") #, options=options
+        if filename != "":
+            with open(filename, "r") as f:
+                self.textEdit.setPlainText(f.read())
 
 def main():
     app = QApplication([])
