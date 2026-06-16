@@ -74,6 +74,12 @@
    <property name="text">
     <string>12pt</string>
    </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
   </action>
   <action name="action18pt">
    <property name="text">

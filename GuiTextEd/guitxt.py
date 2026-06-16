@@ -16,7 +16,7 @@ class MyGUI(QMainWindow):
         self.action24pt.triggered.connect(lambda: self.change_size(24))
 
     def change_size(self, size):
-        self.plainTextEdit.setFont(QFont("Arial", size))
+        self.textEdit.setFont(QFont("Arial", size))
 
 
 def main():
