@@ -16,6 +16,9 @@ class MyGUI(QMainWindow):
         self.action24pt.triggered.connect(lambda: self.change_size(24))
 
         self.actionOpen.triggered.connect(self.open_file)
+        self.actionSave.triggered.connect(self.save_file)
+        self.actionClose.triggered.connect(exit)
+
 
     def change_size(self, size):
         self.textEdit.setFont(QFont("Arial", size))
@@ -26,6 +29,28 @@ class MyGUI(QMainWindow):
         if filename != "":
             with open(filename, "r") as f:
                 self.textEdit.setPlainText(f.read())
+
+    def save_file(self):
+        # options = QFileDialog.Options()
+        filename, _ = QFileDialog.getSaveFileName(self, "Save File", "", "Text Files (*.txt);;ALL Files (*)") # , options=options
+        if filename != "":
+            with open(filename, "w") as f:
+                f.write(self.textEdit.toPlainText())
+    
+    def closeEvent(self, event):
+        dialog = QMessageBox()
+        dialog.setText("Do you want to save your work?")
+        dialog.addButton(QPushButton("Yes"), QMessageBox.YesRole) # value = 0
+        dialog.addButton(QPushButton("No"), QMessageBox.NoRole) # value = 1
+        dialog.addButton(QPushButton("Cancel"), QMessageBox.RejectRole) # value = 2
+
+        answer = dialog.exec()
+        if answer == 0:
+            self.save_file()
+            event.accept()
+        elif answer == 2:
+            event.ignore()
+
 
 def main():
     app = QApplication([])

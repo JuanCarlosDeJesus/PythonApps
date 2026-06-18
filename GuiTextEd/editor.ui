@@ -16,7 +16,11 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <widget class="QTextEdit" name="textEdit"/>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="lineWrapMode">
+       <enum>QTextEdit::NoWrap</enum>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -77,7 +81,7 @@
    <property name="font">
     <font>
      <family>Arial</family>
-     <pointsize>12</pointsize>
+     <pointsize>8</pointsize>
     </font>
    </property>
   </action>
