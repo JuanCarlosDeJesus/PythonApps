@@ -1,1 +1,0 @@
-# Enumeration module for defining enumerated types in Python.
